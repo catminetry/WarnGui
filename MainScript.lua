@@ -1,12 +1,19 @@
 local WarnGui = {}
 
-function WarnGui:new(Lable, Index, DelayTime)
+function WarnGui:new(Lable, Index, ID, DelayTime)
 local WarnGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local MainCorner = Instance.new("UICorner")
 local Title = Instance.new("TextLabel")
 local Text = Instance.new("TextLabel")
 local uk = Instance.new("UIStroke")
+local sd = Instance.new("Sound")
+sd.Parent = game.Workspace
+sd.Volume = 1
+sd.PlaybackSpeed = 1
+sd.SoundId = ID
+sd:Play()
+	
 uk.Parent = Main
 uk.Color = Color3.new(0.266667, 0.266667, 0.266667)
 uk.Thickness = 3.3
